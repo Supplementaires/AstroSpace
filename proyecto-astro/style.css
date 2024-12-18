@@ -1,0 +1,396 @@
+/* Ajustes generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #9c88ff;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #111111;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid #9c88ff ;  /* creates padding around scroll thumb */
+  }
+body {
+    background: #111111;
+    color: #f1f1f1;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+header {
+    background: #1e1e2e;
+    padding: 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    
+}
+
+header .logo {
+    font-size: 2.5rem;
+    color: #8c7ae6;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header .navbar a {
+    margin: 0 1.5rem;
+    color: #f1f1f1;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+header .navbar a:hover {
+    color: #9c88ff;
+}
+
+section {
+    padding: 5rem 10%;
+    text-align: center;
+}
+
+h2.heading {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #8c7ae6;
+}
+/* Diseño de la sección de inicio */
+section#inicio {
+    background: linear-gradient(135deg, #1e1e2e, #111111);
+    padding: 7rem 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    text-align: center;
+    color: #f1f1f1;
+}
+
+section#inicio .inicio-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section#inicio .inicio-texto {
+    flex: 1 1 50%;
+    text-align: left;
+}
+
+section#inicio .inicio-texto h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #8c7ae6;
+    text-transform: uppercase;
+}
+
+section#inicio .inicio-texto p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+section#inicio .inicio-texto .btn {
+    padding: 0.8rem 2rem;
+    background: #8c7ae6;
+    color: #111111;
+    border: none;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+section#inicio .inicio-texto .btn:hover {
+    background: #9c88ff;
+    transform: translateY(-3px);
+}
+
+section#inicio .inicio-imagen {
+    flex: 1 1 40%;
+    text-align: center;
+}
+
+section#inicio .inicio-imagen img {
+    width: 100%;
+    max-width: 500px;
+    animation: float 3s linear infinite;
+
+}
+
+@keyframes float{
+    0%, 100%{
+        transform: translateY(0rem);
+
+    }
+    50%{
+        transform: translateY(3.5rem);
+    }
+}
+
+
+
+
+/* Wallpapers */
+section#wallpapers .wallpaper-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+section#wallpapers .caja {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+section#wallpapers .caja img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+section#wallpapers .caja:hover img {
+    transform: scale(1.1);
+}
+
+section#wallpapers .caja .download-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #8c7ae6;
+    color: #111111;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+section#wallpapers .caja:hover .download-btn {
+    opacity: 1;
+    background: #8c7ae6;
+    color: #111111;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+section#wallpapers .btn:hover {
+    background: #9c88ff;
+}
+/* Información sobre Astros */
+section#informacion {
+    background: #1e1e2e;
+    padding: 5rem 10%;
+    text-align: center;
+}
+
+section#informacion .cajacon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+section#informacion .caja {
+    background: #1e1e2e;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section#informacion .caja:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+}
+
+section#informacion .caja img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+section#informacion .caja h3 {
+    font-size: 1.5rem;
+    color: #8c7ae6;
+    margin-bottom: 0.5rem;
+}
+
+section#informacion .caja p {
+    font-size: 1rem;
+    color: #dcdde1;
+}
+
+
+/* Noticias */
+section#noticias .noticia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #1e1e2e;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1.5rem;
+}
+
+section#noticias .noticia img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+section#noticias .noticia h4 {
+    font-size: 1.5rem;
+    color: #9c88ff;
+    margin-bottom: 0.5rem;
+}
+
+section#noticias .noticia p {
+    font-size: 1rem;
+    color: #dcdde1;
+}
+
+/* Productos */
+section#productos .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+section#productos .caja {
+    background: #1e1e2e;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+section#productos .caja img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+section#productos .caja h3 {
+    color: #8c7ae6;
+    margin-bottom: 0.5rem;
+}
+
+section#productos .caja p {
+    color: #dcdde1;
+    margin-bottom: 1rem;
+}
+
+section#productos .btn {
+    background: #8c7ae6;
+    color: #111111;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+section#productos .btn:hover {
+    background: #9c88ff;
+}
+
+footer {
+    background: #1e1e2e;
+    padding: 2rem;
+    color: #f1f1f1;
+    text-align: center;
+}
+/* Sección de formulario de compra */
+section#formulario-compra {
+    background: #1e1e2e;
+    padding: 5rem 10%;
+    text-align: center;
+}
+
+section#formulario-compra .compra-formulario {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #111111;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+section#formulario-compra .form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+section#formulario-compra label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #f1f1f1;
+}
+
+section#formulario-compra input,
+section#formulario-compra select {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: #1e1e2e;
+    color: #f1f1f1;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+section#formulario-compra input:focus,
+section#formulario-compra select:focus {
+    outline: none;
+    box-shadow: 0 0 5px #8c7ae6;
+}
+
+section#formulario-compra .btn {
+    margin-top: 1rem;
+    padding: 0.8rem 2rem;
+    background: #8c7ae6;
+    color: #111111;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+section#formulario-compra .btn:hover {
+    background: #9c88ff;
+    transform: translateY(-3px);
+}
+
+
